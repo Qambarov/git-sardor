@@ -8,8 +8,12 @@ body {
   background: #e5e5e5;
 }
 
+a {
+  text-decoration: none;
+}
 /* google fonts */
-button,
+.button,
+.btn,
 h2,
 h3 {
   font-family: "Open Sans Condensed", sans-serif;
@@ -35,7 +39,7 @@ h3 {
 
 /* site-header */
 
-#site-header {
+.site-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,9 +67,16 @@ h3 {
   justify-content: space-between;
   align-items: center;
 }
-.logo-text {
+.logo-text a {
   font-weight: 600;
   font-size: 24px;
+  color: #222222;
+}
+.logo-text a:hover {
+  color: #de2e54 !important;
+}
+.logo-text a:focus {
+  color: rgba(222, 46, 84, 0.6);
 }
 
 /* logo-icon */
@@ -99,7 +110,12 @@ h3 {
   font-weight: bold;
   letter-spacing: 2px;
 }
-
+.sitenav ul li a:hover {
+  color: #de2e54 !important;
+}
+.sitenav ul li a:focus {
+  color: #de2e5499;
+}
 /* button */
 
 .btn {
@@ -109,17 +125,31 @@ h3 {
   box-sizing: border-box;
   border-radius: 8px;
 }
-button,
+.btn:hover {
+  background: none;
+  color: #de2e54;
+}
+.btn:focus,
+button:focus {
+  background: rgba(222, 46, 84, 0.6) !important;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+.button a,
 .btn-1,
 .btn-2 {
-  font-family: Open Sans Condensed;
   font-weight: bold;
   font-size: 15px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #ffffff;
 }
-
+.btn-1:hover,
+.btn-2:hover {
+  background-color: #de2e54;
+  color: #ffffff;
+  border-color: #de2e54;
+}
 /*hero */
 
 #hero {
@@ -274,6 +304,12 @@ button,
   width: 1440px;
   height: 97.94px;
   background-color: #222222;
+}
+#site-footer .logo-text a:focus {
+  color: rgba(255, 255, 255, 0.6);
+}
+#site-footer .sitenav ul li a:focus {
+  color: rgba(255, 255, 255, 0.6);
 }
 #site-footer * {
   color: #ffffff;
